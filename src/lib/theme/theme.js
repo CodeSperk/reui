@@ -10,6 +10,18 @@ export const theme = createTheme({
       main: "#666F73",
     }
   },
+  components:{
+    MuiButton: {
+      defaultProps: {
+        variant: "contained"
+      },
+      styleOverrides:{
+        root:{
+          padding : "8px 24px",
+        }
+      },
+    },
+  },
   typography:{
     body1:{
       color: "#0B1134CC",
