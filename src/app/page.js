@@ -1,34 +1,69 @@
-import { Box, Button, Stack, Typography } from '@mui/material'
-import shadows from '@mui/material/styles/shadows'
-import Image from 'next/image'
-import Link from 'next/link'
+import { Box, Button, Container, Stack, Typography } from "@mui/material";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <Stack 
-      justifyContent={"center"}
-      alignItems={"center"}
-      gap={6}
-      height={"100vh"}
+    <Box
       sx={{
-      background: "linear-gradient(135deg, #0C0D1F, #1A1B3A,  #0C0D1F)", color: "white",
-      p: 2
-    }}>
+        background:
+          "linear-gradient(135deg, #0C0D1F, #1A1B3A, #1A1B3A,  #0C0D1F)",
+        color: "white",
+        minHeight: "100vh",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        py: 10,
+        position: "relative",
+      }}
+    >
+      <Box maxWidth="1440px" px={{ xs: 2, md: 6, xl: 10 }}>
+        <Stack
+          direction={{ xs: "column", lg: "row" }}
+          gap={6}
+          justifyContent="between"
+          alignItems="center"
+          sx={{ width: "100%" }}
+        >
+          <Stack
+            direction="column"
+            justifyContent="center"
+            alignItems={{ xs: "center", lg: "start" }}
+          >
+            <Box>
+              <Image
+                style={{ borderRadius: "8px" }}
+                alt="logo"
+                src="/logoWithBG.webp"
+                width={150}
+                height={100}
+              />
+            </Box>
 
-      <Box sx={{margin: "0 auto", textAlign: "center", borderRadius: "20px"}}>
-        <Image  alt='logo' src="/logoWithBG.webp" width={200} height={100}/>
+            <Typography
+              maxWidth={{ xs: "420px", lg: "450" }}
+              textAlign={{ xs: "center", lg: "left" }}
+              variant="h3"
+              py={4}
+            >
+              Storage for <br /> Smooth Development Experience
+            </Typography>
+
+            <Link href="/components">
+              <Button sx={{ py: 2, px: 4 }}>Explore Now</Button>
+            </Link>
+          </Stack>
+
+          <Box sx={{ flex: 1 }}>
+            <Image
+              src="/reui.png"
+              height={600}
+              width={1000}
+              alt="Home Banner Picture"
+            />
+          </Box>
+        </Stack>
       </Box>
-       
-
-      <Typography maxWidth={"520px"} textAlign={"center"} variant='h4' color='#ffffff'>A precise React components, for refined interfaces and smooth development workflows.</Typography>
-
-      <Stack direction={"row"} gap={2}>
-        <Link href="/components"><Button sx={{bgcolor: "transparent"}}
-          >Components</Button></Link>
-        <Button sx={{bgcolor: "transparent"}}>Micro Projects</Button>
-      </Stack>
-
-
-    </Stack>
-  )
+    </Box>
+  );
 }
