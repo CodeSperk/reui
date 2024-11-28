@@ -17,10 +17,10 @@ export default function Home() {
         position: "relative",
       }}
     >
-      <Box maxWidth="1440px" px={{ xs: 2, md: 6, xl: 10 }}>
+      <Box maxWidth="1440px" px={{ xs: 2, md: 6, lg: 8 }}>
         <Stack
           direction={{ xs: "column", lg: "row" }}
-          gap={6}
+          gap={8}
           justifyContent="between"
           alignItems="center"
           sx={{ width: "100%" }}
@@ -41,12 +41,14 @@ export default function Home() {
             </Box>
 
             <Typography
-              maxWidth={{ xs: "420px", lg: "450" }}
+              maxWidth={{ xs: "630px", lg: "420px" }}
               textAlign={{ xs: "center", lg: "left" }}
               variant="h3"
               py={4}
+              fontSize={{xs:"40px" , lg:"48px"}}
+              fontWeight="bold"
             >
-              Storage for <br /> Smooth Development Experience
+              Development Made Smoother with Personal Storage
             </Typography>
 
             <Link href="/components">

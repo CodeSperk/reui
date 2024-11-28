@@ -7,7 +7,7 @@ const ComponentPage = ({params}) => {
     const categoryItems = componentsData.filter(item => item.category === category);
     console.log(categoryItems);
   return (
-    <div className="min-h-[100vh]">
+    <div className="min-h-[calc(100vh - 48px)]">
       <h1>This page is for Categorized components: {category}</h1>
       <Stack direction={"row"} gap={4}>
       {categoryItems.map((item, idx) => (

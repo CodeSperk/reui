@@ -1,6 +1,5 @@
 import { componentsData } from "@/data/componentData";
-import { Box, Button, Stack } from "@mui/material";
-import { blue } from "@mui/material/colors";
+import { Box, Button, Typography } from "@mui/material";
 import Link from "next/link";
 const Components = () => {
   const uniqueCategory = componentsData.reduce((acc, component) => {
@@ -11,16 +10,19 @@ const Components = () => {
   },[])
 
   return (
-    <Box height="100vh" p={10} sx={{backgroundColor: "#DDE0E4"}}>
-      <Stack direction={"row"} gap={4}>
+    <Box>
       {uniqueCategory.map((item, idx) => (
-        <Box key={idx} color={blue}>
+        <Box key={idx} margin="12px" padding={4} borderRadius={2} backgroundColor="white">
+          <Typography>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, quisquam dolorum minima tenetur consequatur tempora perferendis ea magnam. Voluptates maiores rem temporibus? Iusto ut, eos repudiandae rem saepe nulla. Labore quasi ducimus dolor, numquam ab neque et dolorem! Dolor mollitia animi, sint rerum ipsum facere officia maiores aperiam sed porro.
+          </Typography>
+          
           <Link href={`/components/${item.category}`}>
             <Button>{item.category}</Button>
           </Link>
+          
         </Box>
-      ))}
-      </Stack>
+      ))}      
     </Box>
   );
 };
