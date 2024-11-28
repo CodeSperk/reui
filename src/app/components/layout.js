@@ -1,29 +1,30 @@
 "use client";
-import { Box, Stack} from "@mui/system";
+import { Box, Stack } from "@mui/system";
 import { useEffect, useState } from "react";
 import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 import Image from "next/image";
 import SidebarContent from "@/components/Components/SidebarContent";
+import Link from "next/link";
 
 export default function ComponentsLayout({ children }) {
   const [isOpened, setIsOpened] = useState(false);
 
   useEffect(() => {
     const checkWindowSize = () => {
-      if(window.innerWidth >= 1024){
-      setIsOpened(true);
-    }else{
-      setIsOpened(false)
-    }
-  };
+      if (window.innerWidth >= 1200) {
+        setIsOpened(true);
+      } else {
+        setIsOpened(false);
+      }
+    };
     checkWindowSize();
     window.addEventListener("resize", checkWindowSize);
 
     return () => {
       window.removeEventListener("resize", checkWindowSize);
-    }
+    };
   }, []);
-  
+
   return (
     <Box backgroundColor="#E9EAEC" minHeight="100vh">
       {/* navbar */}
@@ -39,18 +40,19 @@ export default function ComponentsLayout({ children }) {
           borderBottom: "2px solid #efefef",
           position: "fixed",
           zIndex: 100,
-          width: "100vw"
+          width: "100vw",
         }}
       >
-        <Box>
-          <Image
-            style={{ borderRadius: "8px" }}
-            alt="logo"
-            src="/logoWithBG.webp"
-            width={80}
-            height={80}
-          />
-        </Box>
+          <Link href="/">
+            <Image
+              style={{ borderRadius: "8px" }}
+              alt="logo"
+              src="/logoWithBG.webp"
+              width={80}
+              height={80}
+            />
+          </Link>
+        
 
         <Box
           onClick={() => setIsOpened(!isOpened)}
@@ -74,24 +76,23 @@ export default function ComponentsLayout({ children }) {
             position: "fixed",
             backgroundColor: "white",
             zIndex: 100,
-            mt: "48px"
+            mt: "48px",
           }}
         >
           <aside>
-            <SidebarContent/>
+            <SidebarContent />
           </aside>
         </Box>
 
         <Box
+          flex={1}
           sx={{
             marginLeft: isOpened ? "200px" : "0px",
             transition: "margin-left 0.3s ease",
-            mt: "48px"
+            mt: "48px",
           }}
         >
-          <main style={{ flex: 1}}>
-            {children}
-          </main>
+          <main style={{ flex: 1 }}>{children}</main>
         </Box>
       </div>
     </Box>

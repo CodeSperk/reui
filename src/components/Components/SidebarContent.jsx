@@ -33,6 +33,8 @@ const SidebarContent = () => {
             },
             borderRight: isActive ? "2px solid #3E4AA5" : "",
             backgroundColor: isActive ? "#D9E5FE" : "",
+            color: isActive ? "primary.main" : "",
+            fontWeight:isActive ? "medium" : ""
           }}>          
             
               {item.category}

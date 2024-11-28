@@ -3,7 +3,7 @@ const { createTheme } = require("@mui/material/styles");
 
 export const theme = createTheme({
   palette:{
-    Focussed:{
+    primary:{
       main: "#3E4AA5"
     },
     secondary:{
@@ -26,6 +26,7 @@ export const theme = createTheme({
   typography:{
     body1:{
       color: "#0B1134CC",
+      textAlign: "justify"
     }
   }
 });
