@@ -5,6 +5,7 @@ import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 import Image from "next/image";
 import SidebarContent from "@/components/Components/SidebarContent";
 import Link from "next/link";
+import { Typography } from "@mui/material";
 
 export default function ComponentsLayout({ children }) {
   const [isOpened, setIsOpened] = useState(false);
@@ -43,15 +44,19 @@ export default function ComponentsLayout({ children }) {
           width: "100vw",
         }}
       >
+          <Stack direction="row" gap={1}>
           <Link href="/">
             <Image
               style={{ borderRadius: "8px" }}
               alt="logo"
-              src="/logoWithBG.webp"
-              width={80}
-              height={80}
+              src="/logo.png"
+              width={36}
+              height={36}
             />
           </Link>
+          <Stack direction="row"><Typography variant="h5" fontWeight={600}>Re</Typography>
+          <Typography variant="h5" color="primary" fontWeight={600}>UI</Typography></Stack>
+          </Stack>
         
 
         <Box

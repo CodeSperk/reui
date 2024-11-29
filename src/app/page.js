@@ -34,12 +34,11 @@ export default function Home() {
               <Image
                 style={{ borderRadius: "8px" }}
                 alt="logo"
-                src="/logoWithBG.webp"
+                src="/logo_w.png"
                 width={150}
                 height={100}
               />
             </Box>
-
             <Typography
               maxWidth={{ xs: "630px", lg: "420px" }}
               textAlign={{ xs: "center", lg: "left" }}
@@ -48,7 +47,8 @@ export default function Home() {
               fontSize={{xs:"40px" , lg:"48px"}}
               fontWeight="bold"
             >
-              Development Made Smoother with Personal Storage
+              <Typography component="span" color="primary" fontSize={{xs:"40px" , lg:"48px"}}
+              fontWeight="bold">ReUI</Typography> has made my design and development much smoother
             </Typography>
 
             <Link href="/components">

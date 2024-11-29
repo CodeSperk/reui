@@ -4,7 +4,7 @@ const { createTheme } = require("@mui/material/styles");
 export const theme = createTheme({
   palette:{
     primary:{
-      main: "#3E4AA5"
+      main: "#2E3CAE"
     },
     secondary:{
       main: "#666F73",
