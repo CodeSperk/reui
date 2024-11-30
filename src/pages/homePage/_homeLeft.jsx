@@ -12,7 +12,7 @@ const HomeLeft = () => {
               <Image
                 style={{ borderRadius: "8px" }}
                 alt="logo"
-                src="/logo_w.png"
+                src="/logo.png"
                 width={150}
                 height={100}
               />

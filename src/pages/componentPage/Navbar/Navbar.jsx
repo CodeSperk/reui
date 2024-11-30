@@ -21,19 +21,19 @@ const ComponentNavbar = ({ isOpened, setIsOpened }) => {
           width: "100vw",
         }}
       >
-          <Stack direction="row" gap={1}>
           <Link href="/">
+          <Stack direction= "row" gap={1} alignItems="center">
             <Image
               style={{ borderRadius: "8px" }}
               alt="logo"
-              src="/logo.png"
-              width={36}
-              height={36}
+              src="/logo1.png"
+              width={40}
+              height={40}
             />
-          </Link>
-          <Stack direction="row"><Typography variant="h5" fontWeight={600}>Re</Typography>
-          <Typography variant="h5" color="primary.main" fontWeight={600}>UI</Typography></Stack>
+            <Typography fontSize="24px" fontWeight={700}>ReUI</Typography>
           </Stack>
+          </Link>
+          
         
         <Box
           onClick={() => setIsOpened(!isOpened)}
