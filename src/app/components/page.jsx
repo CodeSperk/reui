@@ -21,7 +21,6 @@ const Components = () => {
           <Link href={`/components/${item.category}`}>
             <Button>{item.category}</Button>
           </Link>
-          
         </Box>
       ))}      
     </Box>

@@ -8,6 +8,12 @@ export const theme = createTheme({
     },
     secondary:{
       main: "#666F73",
+    },
+    bg:{
+      main: "#E9EAEC",
+    },
+    "white-dark":{
+      main: "#ffffff"
     }
   },
   components:{

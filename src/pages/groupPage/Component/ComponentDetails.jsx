@@ -1,7 +1,7 @@
 "use client"
 import { Box, Tab, Tabs } from "@mui/material";
 import { useState } from "react";
-import CodeBlock from "./CodeBlock";
+import CodeBlock from "./_codeBlock";
 
 const ComponentDetails = ({ item, categoryItems, idx }) => {
   const [tabIndexes, setTabIndexes] = useState(categoryItems.map(() => 0));

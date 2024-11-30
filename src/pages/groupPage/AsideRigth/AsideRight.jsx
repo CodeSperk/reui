@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 
 const AsideRight = ({items, activeIndex, handleClick}) => {
-  console.log(activeIndex);
+
   return (
     <div>
       {
@@ -18,9 +18,10 @@ const AsideRight = ({items, activeIndex, handleClick}) => {
         >
             <Typography
               sx={{
-                color: idx === activeIndex + 1 ? "primary.main" : "",
-                fontWeight: idx === activeIndex + 1 ? "bold" : "normal",
-                borderLeft: idx === activeIndex + 1 ? "2px solid #3E4AA5" : "normal",
+                fontSize:14,
+                color: idx === activeIndex ? "primary.main" : "",
+                fontWeight: idx === activeIndex ? "bold" : "normal",
+                borderLeft: idx === activeIndex ? "2px solid #3E4AA5" : "normal",
                 pl: 1,
 
               }}

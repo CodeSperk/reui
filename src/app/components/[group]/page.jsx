@@ -1,13 +1,13 @@
 "use client";
 import { componentsData } from "@/data/componentData";
 import { Box, IconButton, Stack, Tab, Tabs, Typography } from "@mui/material";
-import CategoryHeader from "pages/groupPage/Header";
-import AsideRight from "pages/groupPage/asideRight";
+import CategoryHeader from "pages/groupPage/Header/Header";
+import AsideRight from "pages/groupPage/AsideRigth/AsideRight";
 import { useEffect, useRef, useState } from "react";
-import ComponentDetails from "pages/groupPage/ComponentDetails/componentDetails";
+import ComponentDetails from "pages/groupPage/Component/ComponentDetails";
 
 
-const ComponentPage = ({ params }) => {
+const GroupPage = ({ params }) => {
   const category = params.group;
   const [activeIndex, setActiveIndex] = useState(0);
   const sectionRefs = useRef([]);
@@ -27,7 +27,7 @@ const ComponentPage = ({ params }) => {
       },
       {
         root: null,
-        rootMargin: "0px 0px -100% 0px",
+        rootMargin: "-20% 0px -100% 0px",
         threshold: 0,
       }
     );
@@ -88,7 +88,6 @@ const ComponentPage = ({ params }) => {
                 </Box>
               ))}
             </Stack>
-            <Box></Box>
           </main>
         </Box>
 
@@ -122,4 +121,4 @@ const ComponentPage = ({ params }) => {
   );
 };
 
-export default ComponentPage;
+export default GroupPage;
