@@ -19,19 +19,26 @@ const ComponentDetails = ({ item, categoryItems, idx }) => {
           handleTabChange(event, newTabIndex, idx)
         }
         aria-label="component tabs"
+        sx={{backgroundColor:"#F0F1FF", fontWeight: 'bold'}}
       >
-        <Tab label="Component" />
+        <Tab label="Preview" />
         {item.tailwindCode && <Tab label="Tailwind" />}
         {item.vanillaCode && <Tab label="Vanilla" />}
         {item.muiCode && <Tab label="MUI" />}
       </Tabs>
 
       <Box sx={{
-        maxWidth:"100%",
-        overflowX:"auto",
-        py:2
+        width:"100%",
+        overflowX: "auto",
+        height:"448px",
+        backgroundColor:"#F8F9FF",
+        p:2,
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center"
       }}>
         {tabIndexes[idx] === 0 && <item.component />}
+       
         
         {tabIndexes[idx] === 1 && item.tailwindCode && (
           <CodeBlock 

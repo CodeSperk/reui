@@ -14,14 +14,13 @@ const ComponentNavbar = ({ isOpened, setIsOpened }) => {
       sx={{
         height: "56px",
         boxShadow: "0px 1px 4px #DDE0E4",
-        backgroundColor: "white-dark.main",
+        backgroundColor: "white",
         borderBottom: "2px solid #efefef",
         position: "fixed",
         zIndex: 100,
         width: "100vw",
       }}
     >
-      
       <Link href="/">
         <Stack direction="row" gap={1} alignItems="center">
           <Image
@@ -43,9 +42,10 @@ const ComponentNavbar = ({ isOpened, setIsOpened }) => {
           cursor: "pointer",
           transform: `rotate(${isOpened ? 0 : 180}deg)`,
           transition: "transform 0.5s ease",
-          backgroundColor:"bg.main",
-          padding:"8px",
-          borderRadius:"50%",
+          gap:"12px",
+          backgroundColor: "#E9EAEC",
+          padding: "8px",
+          borderRadius: "50%",
         }}
       >
         <MenuOpenIcon fontSize="medium" />

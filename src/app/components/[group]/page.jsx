@@ -60,7 +60,7 @@ const GroupPage = ({ params }) => {
   };
 
   return (
-    <Box className="min-h-[calc(100vh - 48px)]">
+    <Box className="min-h-[calc(100vh - 56px)]">
       <Stack direction="row" gap={2} margin="12px">
         <Box borderRadius={1} flex={1} marginRight={{ md: "212px" }}>
           <main>
@@ -82,7 +82,9 @@ const GroupPage = ({ params }) => {
                       {item.description}
                     </Typography>
 
-                    <ComponentDetails item={item} categoryItems={categoryItems} idx={idx}/>
+                   
+                   <ComponentDetails item={item} categoryItems={categoryItems} idx={idx}/>
+                   
 
                   </Box>
                 </Box>
@@ -100,10 +102,10 @@ const GroupPage = ({ params }) => {
           width="200px"
           display={{ xs: "none", md: "block" }}
           position="fixed"
-          top="48px"
+          top="56px"
           mt="12px"
           right="12px"
-          maxHeight="calc(100vh - 48px)"
+          maxHeight="calc(100vh - 56px)"
           style={{
             overflowY: "auto",
           }}

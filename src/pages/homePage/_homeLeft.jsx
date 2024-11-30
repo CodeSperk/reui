@@ -22,10 +22,10 @@ const HomeLeft = () => {
               textAlign={{ xs: "center", lg: "left" }}
               variant="h3"
               py={4}
-              fontSize={{xs:"40px" , lg:"48px"}}
+              fontSize={{xs:"40px" , lg:"56px"}}
               fontWeight="bold"
             >
-              <Typography component="span" color="primary" fontSize={{xs:"40px" , lg:"48px"}}
+              <Typography component="span" color="primary" fontSize={{xs:"40px" , lg:"56px"}}
               fontWeight="bold">ReUI</Typography> has made my design and development much smoother
             </Typography>
 

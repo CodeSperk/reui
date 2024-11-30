@@ -23,7 +23,6 @@ const AsideRight = ({items, activeIndex, handleClick}) => {
                 fontWeight: idx === activeIndex ? "bold" : "normal",
                 borderLeft: idx === activeIndex ? "2px solid #3E4AA5" : "normal",
                 pl: 1,
-
               }}
             >{item.name} </Typography>
           </Box>

@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import SidebarContent from "./_sidebarContent";
+import SidebarContent from "./SidebarContent";
 
 const AsideLeft = ({isOpened}) => {
   return (
@@ -10,7 +10,7 @@ const AsideLeft = ({isOpened}) => {
             height: "calc(100vh - 56px)",
             transition: "margin-left 0.3s ease",
             position: "fixed",
-            backgroundColor: "white-dark.main",
+            backgroundColor: "white",
             zIndex: 100,
             mt: "56px",
           }}

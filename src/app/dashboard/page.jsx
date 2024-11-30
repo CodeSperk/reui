@@ -1,11 +1,10 @@
-"use client";
-import { Box } from "@mui/system";
-import { useEffect, useState } from "react";
-import SidebarContent from "pages/componentPage/Sidebar/_sidebarContent";
-import ComponentNavbar from "pages/componentPage/Navbar/Navbar";
-import AsideLeft from "pages/componentPage/Sidebar/AsideLeft";
+"use client"
+import React, { useEffect, useState } from 'react';
+import AsideLeft from './AsideLeft';
+import { Box } from '@mui/material';
+import ComponentNavbar from './ComponentNavbar';
 
-export default function ComponentsLayout({ children }) {
+const Dashboard = () => {
   const [isOpened, setIsOpened] = useState(false);
 
   useEffect(() => {
@@ -23,12 +22,9 @@ export default function ComponentsLayout({ children }) {
       window.removeEventListener("resize", checkWindowSize);
     };
   }, []);
-
   return (
-    <Box backgroundColor="bg.main" minHeight="100vh">
+    <Box backgroundColor="#E9EAEC" minHeight="100vh">
       <ComponentNavbar isOpened={isOpened} setIsOpened={setIsOpened}/>
-     
-    
       <div style={{ display: "flex" }}>
         <AsideLeft isOpened={isOpened}/>
 
@@ -40,13 +36,14 @@ export default function ComponentsLayout({ children }) {
             mt: "56px",
           }}
         >
-          <main style={{ flex: 1 }}>{children}</main>
-          {/* footer */}
-          <Box minHeight={300}>
-          This is footer
-          </Box>
+          <main style={{ flex: 1 }}>
+            This is main
+          </main>
+          
         </Box>
       </div>
     </Box>
   );
-}
+};
+
+export default Dashboard;

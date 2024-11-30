@@ -3,22 +3,23 @@ import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 import Image from "next/image";
 import Link from "next/link";
 
-const ComponentNavbar = ({ isOpened, setIsOpened }) => {
+const TopNav = ({ isOpened, setIsOpened }) => {
   return (
     <Stack
       direction="row"
       justifyContent="space-between"
       alignItems="center"
       gap={4}
-      px={{ xs: 2, md: 6, lg: 8 }}
+      px={3}
       sx={{
         height: "56px",
         boxShadow: "0px 1px 4px #DDE0E4",
         backgroundColor: "white-dark.main",
         borderBottom: "2px solid #efefef",
-        position: "fixed",
+        // position: "fixed",
         zIndex: 100,
-        width: "100vw",
+        // width: "100vw",
+        width: "100%",
       }}
     >
       
@@ -54,4 +55,4 @@ const ComponentNavbar = ({ isOpened, setIsOpened }) => {
   );
 };
 
-export default ComponentNavbar;
+export default TopNav;

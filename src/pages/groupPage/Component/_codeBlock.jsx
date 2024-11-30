@@ -4,20 +4,20 @@ import CopyToClipboard from "react-copy-to-clipboard";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
 
+
 const CodeBlock = ({ code, title }) => {
   if (!code) return null;
   return (
-    <div>
       <Box
         sx={{
-          backgroundColor: "#2d2d2d",
           borderRadius: "8px",
-          p: 2,
+          width:"100%",
+          height:"400px",
           boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
           fontFamily: "'Menlo', 'Monaco', 'Courier New', monospace",
           color: "#f5f5f5",
           mb: 2,
-          overflowX: "hidden",
+          overflowX: "auto",
           whiteSpace: "pre-wrap",
         }}
       >
@@ -27,7 +27,7 @@ const CodeBlock = ({ code, title }) => {
             justifyContent: "space-between",
             alignItems: "center",
             backgroundColor: "#2c2c2c",
-            p: "5px 12px",
+            p: 2.5,
             borderRadius: "8px 8px 0 0",
             color: "#e0e0e0",
             height: "30px",
@@ -78,20 +78,22 @@ const CodeBlock = ({ code, title }) => {
           </CopyToClipboard>
         </Box>
 
-        <Box sx={{ width:"100%" }}>
+      
           <SyntaxHighlighter 
             language="jsx"
             style={dracula}
             customStyle={{
               margin: 0,
-              width: "100%",
+              height:"90%",
+              borderRadius: "0px",
             }}
           >
             {code}
           </SyntaxHighlighter>
-        </Box>
+            
+          
       </Box>
-    </div>
+  
   );
 };
 
