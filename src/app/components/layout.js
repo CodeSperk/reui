@@ -3,9 +3,9 @@ import { Box, Stack } from "@mui/system";
 import { useEffect, useState } from "react";
 import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 import Image from "next/image";
-import SidebarContent from "@/components/Components/SidebarContent";
 import Link from "next/link";
 import { Typography } from "@mui/material";
+import SidebarContent from "pages/componentPage/SidebarContent";
 
 export default function ComponentsLayout({ children }) {
   const [isOpened, setIsOpened] = useState(false);
@@ -29,6 +29,7 @@ export default function ComponentsLayout({ children }) {
   return (
     <Box backgroundColor="#E9EAEC" minHeight="100vh">
       {/* navbar */}
+      
       <Stack
         direction="flex"
         alignItems="center"

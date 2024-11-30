@@ -15,7 +15,6 @@ const AsideRight = ({items, activeIndex, handleClick}) => {
             fontWeight: idx === activeIndex ? "bold" : "normal", // Bold active
             cursor: "pointer",
           }}
-          
         >
             <Typography
               sx={{

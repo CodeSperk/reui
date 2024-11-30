@@ -1,8 +1,8 @@
-import { Box, Button, Container, Stack, Typography } from "@mui/material";
+import { Box, Button, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <Box
       sx={{

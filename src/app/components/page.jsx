@@ -1,6 +1,7 @@
 import { componentsData } from "@/data/componentData";
 import { Box, Button, Typography } from "@mui/material";
 import Link from "next/link";
+
 const Components = () => {
   const uniqueCategory = componentsData.reduce((acc, component) => {
     if(!acc.some((item) => item.category ===component.category)){

@@ -1,8 +1,7 @@
 import { componentsData } from '@/data/componentData';
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
-import React from 'react';
 
 const SidebarContent = () => {
   const {group} = useParams();
